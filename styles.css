@@ -1,0 +1,84 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+h2 { text-align: center; }
+model-viewer { width: 100%; height: 300px; background: #f0f0f0; display: block; }
+
+.pattern { margin-bottom: 40px; }
+.pattern .label-row { 
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+/* プレビュー全体をブラウザ幅に合わせてスケール */
+.preview-scale { width: 100%; overflow: hidden; }
+.preview-wrapper { transform-origin: left top; display: inline-block; }
+.preview-container { display:flex; gap:0px; align-items:flex-start; flex-wrap: nowrap; }
+.preview-item { position: relative; display:inline-block; margin-bottom: 80px; }
+.preview-item img { display: block; height: auto; max-width: none; }
+.preview-item .overlay { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+/* テクスチャラベル */
+.replace-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 5px);
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* 差し替えボタン（大きめ固定サイズ） */
+.replace-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 35px);
+  background:#4fa15c;
+  color:#fff;
+  width: 110px;
+  height: 35px;
+  border-radius:10px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  text-decoration:none;
+}
+.replace-btn input[type=file] { display:none; }
+
+/* 印刷ボタン */
+.print-controls { margin: 20px 0; text-align: center; }
+.print-controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+@media (max-width:600px) {
+  body { padding:12px; }
+}
+
+.reset-btn {
+  position: absolute;
+  left: 10%;
+  top: calc(100% + 35px);
+  background:#5d5d5d;
+  color:#fff;
+  width: 100px;
+  height: 35px;
+  border-radius:10px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  text-decoration:none;
+}
