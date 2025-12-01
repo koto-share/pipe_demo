@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>パイプロイド型紙メーカー</title>
+
+  <!-- model-viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2>パイプロイド型紙メーカー</h2>
+
+  <!-- 3Dモデル -->
+  <model-viewer id="viewer" src="model/model.glb" camera-controls></model-viewer>
+
+  <!-- pattern01 -->
+  <div class="pattern" id="pattern01">
+    <div class="label-row"><label><input type="checkbox" class="print-check" checked> pattern01 を印刷する</label></div>
+    <div class="preview-scale">
+      <div class="preview-wrapper">
+        <div class="preview-container">
+          <div class="preview-item">
+            <img id="preview-face.001" src="model/face.001.jpg" data-base="model/face.001.jpg" alt="face.001">
+            <img class="overlay" src="model/face.001_temp.png" alt="overlay face.001">
+            <div class="replace-label">face01</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('face.001', this)">
+            </label>
+          </div>
+          <div class="preview-item">
+            <img id="preview-face.002" src="model/face.002.jpg" data-base="model/face.002.jpg" alt="face.002">
+            <img class="overlay" src="model/face.002_temp.png" alt="overlay face.002">
+            <div class="replace-label">face02</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('face.002', this)">
+            </label>
+          </div>
+          <div class="preview-item">
+            <img id="preview-arm.001" src="model/arm.001.jpg" data-base="model/arm.001.jpg" alt="arm.001">
+            <img class="overlay" src="model/arm.001_temp.png" alt="overlay arm.001">
+            <div class="replace-label">arm.001</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('arm.001', this)">
+            </label>
+          </div>
+           <div class="preview-item">
+            <img id="preview-arm.001" src="model/arm.002.jpg" data-base="model/arm.002.jpg" alt="arm.002">
+            <img class="overlay" src="model/arm.002_temp.png" alt="overlay arm.002">
+            <div class="replace-label">arm.002</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('arm.002', this)">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pattern02 -->
+  <div class="pattern" id="pattern02">
+    <div class="label-row"><label><input type="checkbox" class="print-check" checked> pattern02 を印刷する</label></div>
+    <div class="preview-scale">
+      <div class="preview-wrapper">
+        <div class="preview-container">
+          <div class="preview-item">
+            <img id="preview-foot_01" src="model/foot_01.jpg" data-base="model/foot_01.jpg" alt="foot_01">
+            <img class="overlay" src="model/foot_01_temp.png" alt="overlay foot_01">
+            <div class="replace-label">foot_01</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('foot_01', this)">
+            </label>
+          </div>
+          <div class="preview-item">
+            <img id="preview-body.001" src="model/body.001.jpg" data-base="model/body.001.jpg" alt="body.001">
+            <img class="overlay" src="model/body.001_temp.png" alt="overlay body.001">
+            <div class="replace-label">body.001</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('body.001', this)">
+            </label>
+          </div>
+          <div class="preview-item">
+            <img id="preview-hand.001" src="model/hand.001.jpg" data-base="model/hand.001.jpg" alt="hand.001">
+            <img class="overlay" src="model/hand.001_temp.png" alt="overlay hand.001">
+            <div class="replace-label">hand.001</div>
+            <label class="replace-btn">変更
+              <input type="file" accept="image/*" onchange="changeTexture('hand.001', this)">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 印刷ボタン -->
+  <div class="print-controls">
+    <button id="print-btn">選択した型紙をPDF出力</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
