@@ -19,6 +19,7 @@ margin: 0 auto; max-width: 1000px; }
 .preview-item { position: relative; display:inline-block; margin-bottom: 80px; }
 .preview-item img { display: block; height: auto; max-width: none; }
 .preview-item .overlay { position: absolute; top: 0; left: 0; pointer-events: none; }
+.howto { margin: 40px auto; text-align: center; }
 
 /* テクスチャラベル */
 .replace-label {
