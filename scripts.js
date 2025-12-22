@@ -96,7 +96,7 @@ function adjustPreviewScale() {
 // PDF 出力
 document.getElementById('print-btn').addEventListener('click', async () => {
   const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: [297, 210] }); // A4
+  const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: [182, 257] }); // B5
 
   const patterns = Array.from(document.querySelectorAll('.pattern'));
   const checked = patterns.filter(p => p.querySelector('.print-check').checked);
