@@ -7,13 +7,13 @@ h2 { text-align: center; }
 model-viewer { width: 100%; height: 300px; background: #f0f0f0; display: block; }
 
 .pattern { margin-bottom: 40px; 
-margin: 0 auto; max-width: 1000px; }
+margin: 0 auto; max-width: 1000px; max-height: 500px; }
 .pattern .label-row { 
   margin-top: 10px;
   margin-bottom: 10px; }
 
 /* プレビュー全体をブラウザ幅に合わせてスケール */
-.preview-scale { width: 100%; overflow: hidden; }
+.preview-scale { width: 100%; height: 350px; overflow: hidden; }
 .preview-wrapper { transform-origin: left top; display: inline-block; }
 .preview-container { display:flex; gap:0px; align-items:flex-start; flex-wrap: nowrap; }
 .preview-item { position: relative; display:inline-block; margin-bottom: 80px; }
